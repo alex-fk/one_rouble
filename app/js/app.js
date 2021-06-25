@@ -1,7 +1,7 @@
 // // Import jQuery module (npm i jquery)
-// import $ from 'jquery'
-// window.jQuery = $
-// window.$ = $
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
 
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
@@ -10,4 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Custom JS
 
+	$( ".top-header__button" ).click(function() {
+		$( ".top-header__modal-window" ).fadeIn( "slow", function() {
+		  // Animation complete
+		});
+	  });
+	  $( ".top-header__modal-window__close-button" ).click(function() {
+		$( ".top-header__modal-window" ).fadeOut( "slow", function() {
+		  // Animation complete
+		});
+	  });
 })

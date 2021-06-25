@@ -73,15 +73,18 @@ body, html {
     bottom: 0;
     left: 0;
     margin: auto;
-    background-color: $accent;  
+    background-color: $color_1 ;
+    display: none;
+    box-shadow: 0 0 10px #000;
 }
 .top-header__text-modal-window{
     font-size: 30px;
-    background-color: $color_2;
+    background-color: $accent;
     width: 100%;
     border-radius: 10px 10px 0px 0px;
-    color: $color_1;
+    color: $color_2;
     line-height: 2;
+    border-bottom: 2px solid $color_2;
 }
 .top-header__card-modal-window{
     color: $color_2;
@@ -89,5 +92,43 @@ body, html {
     top: 50%;
     text-align: center;
     width: 100%;
+}
+.top-header__modal-window__close-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50% ;
+    border: 3px solid $color_1;
+    background-color: $color_1;
+    position: absolute;
+    top:-10px;
+    right:-10px;
+    box-shadow: 0 0 10px #000;
+    display: block;
+    text-decoration: none;
+}
+.top-header__modal-window__close-button:before, .top-header__modal-window__close-button:after {
+    position: absolute;
+    left: 16px;
+    top: 2px;
+    content: ' ';
+    height: 30px;
+    width: 2px;
+    background-color: lighten($color_2, 50%); 
+    transition: transform 1s, background-color .5s;
+  }
+.top-header__modal-window__close-button:hover:before, .top-header__modal-window__close-button:hover:after {
+    background-color: $color_2;
+  }
+.top-header__modal-window__close-button:before {
+    transform: rotate(45deg);
+  }
+.top-header__modal-window__close-button:hover:before {
+    transform: rotate(135deg);
+}
+.top-header__modal-window__close-button:after {
+    transform: rotate(-45deg);
+}
+.top-header__modal-window__close-button:hover:after {
+    transform: rotate(45deg);
 }
     
